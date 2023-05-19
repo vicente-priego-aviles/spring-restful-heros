@@ -1,4 +1,4 @@
-package com.javacadabra.superhero;
+package com.javacadabra.hero;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -13,10 +13,10 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class SuperHeroe {
+public class Hero {
 
     private @Id @GeneratedValue Long id;
-    private String nombre;
-    private String descripcion;
-    private String poder;
+    private String name;
+    private String power;
+    private String descriptor;
 }

@@ -1,4 +1,4 @@
-package com.javacadabra.superhero;
+package com.javacadabra.hero;
 
 import com.github.javafaker.Faker;
 import com.github.javafaker.Superhero;
@@ -11,23 +11,23 @@ import org.springframework.context.annotation.Configuration;
 import java.util.stream.IntStream;
 
 @Configuration
-class CargaDatos {
+class LoadData {
 
-    private static final Logger log = LoggerFactory.getLogger(CargaDatos.class);
+    private static final Logger log = LoggerFactory.getLogger(LoadData.class);
 
     @Bean
-    CommandLineRunner iniciarDatos(SuperHeroeRepository repositorio) {
+    CommandLineRunner iniciarDatos(HeroRepository repository) {
 
         return args -> {
             IntStream.range(0, 100).forEach(i ->
                 {
                     Superhero hero = new Faker().superhero();
 
-                    repositorio.save(
-                            SuperHeroe.builder()
-                                    .nombre(hero.name())
-                                    .descripcion(hero.descriptor())
-                                    .poder(hero.power())
+                    repository.save(
+                            Hero.builder()
+                                    .name(hero.name())
+                                    .power(hero.power())
+                                    .descriptor(hero.descriptor())
                                     .build()
                     );
                 });

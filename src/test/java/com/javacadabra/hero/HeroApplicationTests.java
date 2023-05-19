@@ -1,10 +1,10 @@
-package com.javacadabra.superhero;
+package com.javacadabra.hero;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class SuperHeroeApplicationTests {
+class HeroApplicationTests {
 
 	@Test
 	void contextLoads() {
