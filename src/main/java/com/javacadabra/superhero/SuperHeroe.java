@@ -1,4 +1,4 @@
-package com.javacadabra.nomina;
+package com.javacadabra.superhero;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;

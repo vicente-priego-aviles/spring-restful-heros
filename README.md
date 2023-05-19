@@ -1,2 +1,2 @@
-# spring-restful-nominas
+# spring-restful-superheroes
 Servicios RESTful con Spring

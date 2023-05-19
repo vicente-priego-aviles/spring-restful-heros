@@ -1,4 +1,4 @@
-package com.javacadabra.nomina;
+package com.javacadabra.superhero;
 
 import com.github.javafaker.Faker;
 import com.github.javafaker.Superhero;
@@ -16,7 +16,7 @@ class CargaDatos {
     private static final Logger log = LoggerFactory.getLogger(CargaDatos.class);
 
     @Bean
-    CommandLineRunner iniciarDatos(EmpleadoRepository repositorio) {
+    CommandLineRunner iniciarDatos(SuperHeroeRepository repositorio) {
 
         return args -> {
             IntStream.range(0, 100).forEach(i ->
