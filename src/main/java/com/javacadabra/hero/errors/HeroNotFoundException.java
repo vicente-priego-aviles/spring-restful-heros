@@ -1,7 +1,7 @@
-package com.javacadabra.hero;
+package com.javacadabra.hero.errors;
 
 public class HeroNotFoundException extends RuntimeException {
-    HeroNotFoundException(Long id) {
+    public HeroNotFoundException(Long id) {
         super("Could not find hero with id= " + id);
     }
 }

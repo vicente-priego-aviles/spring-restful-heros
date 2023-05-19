@@ -1,7 +1,9 @@
-package com.javacadabra.hero;
+package com.javacadabra.hero.data;
 
 import com.github.javafaker.Faker;
 import com.github.javafaker.Superhero;
+import com.javacadabra.hero.Hero;
+import com.javacadabra.hero.HeroRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -9,12 +11,13 @@ import org.springframework.context.annotation.Configuration;
 import java.util.stream.IntStream;
 
 @Configuration
-class LoadData {
+class DataLoad {
 
+    private final static int NUM_HEROES = 10;
     @Bean
-    CommandLineRunner iniciarDatos(HeroRepository repository) {
+    CommandLineRunner load(HeroRepository repository) {
 
-        return args -> IntStream.range(0, 100).forEach(i -> {
+        return args -> IntStream.range(0, NUM_HEROES).forEach(i -> {
             Superhero hero = new Faker().superhero();
 
             repository.save(
