@@ -1,4 +1,4 @@
-package com.javacadabra.nomina;
+package com.javacadabra.superhero;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
