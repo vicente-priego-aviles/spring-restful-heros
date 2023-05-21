@@ -17,6 +17,7 @@ import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.methodOn;
 
 @AllArgsConstructor
 @RestController
+// TODO : @RequestMapping("api//heroes")
 public class HeroController {
 
     private final HeroRepository repository;
